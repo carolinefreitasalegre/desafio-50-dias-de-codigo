@@ -1,6 +1,5 @@
 ﻿string resposta;
 List<int> numeros = new List<int>();
-int num = 0;
 
 do
 {
@@ -11,21 +10,27 @@ do
         if (resposta == "S")
         {
             Console.WriteLine("Número: ");
-            num = int.Parse(Console.ReadLine());
-            numeros.Add(num);
+            string entrada = Console.ReadLine();
+            if (int.TryParse(entrada, out int numero))            {
+                
+                numeros.Add(numero);
+            }
+            else
+            {
+                Console.WriteLine("Você precisa digitar um um valor numérico...");
+            }
         }
         else
         {
         
-            Console.WriteLine($"Sua lista de númeors é: ");
+            Console.WriteLine($"Sua lista de números é: ");
             foreach (var n in numeros)
             {
                 Console.WriteLine(n);
-    
             }
 
             Console.WriteLine($"A soma deles é: {numeros.Sum()}");
-            Console.WriteLine($"A média deles é: {numeros.Average()}");
+            Console.WriteLine($"A média deles é: {numeros.Average():F2}");
             Console.WriteLine($"O maior número é: {numeros.Max()}");
             Console.WriteLine($"O menor número é: {numeros.Min()}");
 
