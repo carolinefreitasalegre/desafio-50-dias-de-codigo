@@ -1,0 +1,8 @@
+
+
+# JetBrains / Rider
+.idea/
+
+# .NET
+bin/
+obj/
