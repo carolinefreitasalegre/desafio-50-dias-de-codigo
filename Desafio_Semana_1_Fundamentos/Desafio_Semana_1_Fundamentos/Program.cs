@@ -11,7 +11,8 @@ do
         {
             Console.WriteLine("Número: ");
             string entrada = Console.ReadLine();
-            if (int.TryParse(entrada, out int numero))            {
+            if (int.TryParse(entrada, out int numero))            
+            {
                 
                 numeros.Add(numero);
             }

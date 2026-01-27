@@ -1,0 +1,6 @@
+@Semana_2_Crud_HostAddress = http://localhost:5144
+
+GET {{Semana_2_Crud_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
